@@ -18,6 +18,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 
+    // db
+    runtimeOnly ("com.mysql:mysql-connector-j:8.2.0")
+
     // test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
