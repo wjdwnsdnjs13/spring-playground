@@ -21,6 +21,10 @@ dependencies {
     // db
     runtimeOnly ("com.mysql:mysql-connector-j:8.2.0")
 
+//    lombok
+    compileOnly("org.projectlombok:lombok")
+    annotationProcessor("org.projectlombok:lombok")
+
     // test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
