@@ -19,7 +19,8 @@ public class UserController {
 
 	@PostMapping()
 	public ResponseEntity<?> userRegister(@RequestBody UserRegisterRequestDto userRegisterRequestDto){
-		userService.userRegister(userRegisterRequestDto);
-		return ResponseEntity.status(HttpStatus.OK).body("hi");
+		boolean result = userService.userRegister(userRegisterRequestDto);
+		if(result) return ResponseEntity.status(HttpStatus.OK).body("회원 가입에 성공했습니다.");
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("중복된 이름이 존재합니다.");
 	}
 }
