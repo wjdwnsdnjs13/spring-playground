@@ -21,6 +21,9 @@ dependencies {
     // db
     runtimeOnly ("com.mysql:mysql-connector-j:8.2.0")
 
+//    swagger
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
+
     // test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
